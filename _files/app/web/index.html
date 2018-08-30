@@ -1,0 +1,25 @@
+<div class="container-fluid mt-3">
+    <h2>Search for an Artist & Get Their Top 8 Songs according to LastFM!</h2>
+    <form class="form-inline mb-3">
+      <div class="input-group">
+        <div class="input-group-prepend">
+          <div class="input-group-text">Artist</div>
+        </div>
+        <input ng-model="artist" type="text" class="form-control" id="artist" placeholder="Artist">
+      </div>
+
+      <button ng-click="search()" type="submit" class="btn btn-primary mb-2">Submit</button>
+    </form>
+    <div class="row">
+        <div ng-if="songs.length > 0" ng-repeat="song in songs" class="col-3">
+            <div class="card mb-3">
+<!--                 <img class="card-img-top" ng-src="{{song.image.extralarge}}" alt="song image"/> -->
+                <div class="card-body">
+                    <h5 class="card-title">Title: "{{song.name}}"<br>Unique Listeners: {{song.listeners}}</h5>
+                    <!-- <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p> -->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
