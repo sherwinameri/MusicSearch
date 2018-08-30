@@ -13,7 +13,7 @@
     <div class="row">
         <div ng-if="songs.length > 0" ng-repeat="song in songs" class="col-3">
             <div class="card mb-3">
-<!--                 <img class="card-img-top" ng-src="{{song.image.extralarge}}" alt="song image"/> -->
+                <img class="card-img-top" ng-src="{{song.image[3]['#text']}}" alt="song image"/>
                 <div class="card-body">
                     <h5 class="card-title">Title: "{{song.name}}"<br>Unique Listeners: {{song.listeners}}</h5>
                     <!-- <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
